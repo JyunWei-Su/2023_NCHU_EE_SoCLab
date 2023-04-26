@@ -1,0 +1,5 @@
+jtag 設定
+https://digilent.com/reference/learn/programmable-logic/tutorials/zedboard-programming-guide/start
+
+看不到 com 查安裝目錄 安裝 install_degilent.exe
+C:\Xilinx\Vivado\2019.1\data\xicom\cable_drivers\nt64\digilent
