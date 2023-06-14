@@ -1,0 +1,378 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug 22 10:48:28 2019
+# Process ID: 7592
+# Current directory: E:/Proj_2019/NCHU/YoloTop_ref/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log yolo_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source yolo_top.tcl
+# Log file: E:/Proj_2019/NCHU/YoloTop_ref/project_1/project_1.runs/synth_1/yolo_top.vds
+# Journal file: E:/Proj_2019/NCHU/YoloTop_ref/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source yolo_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/proj_2019/nchu/yolotop_ref'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top yolo_top -part xczu9eg-ffvb1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 992 
+WARNING: [Synth 8-2507] parameter declaration becomes local in yolo_top with formal parameter declaration list [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_top.v:34]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 580.227 ; gain = 189.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'yolo_top' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_top.v:11]
+	Parameter TBITS bound to: 64 - type: integer 
+	Parameter TBYTE bound to: 8 - type: integer 
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'yolo_core' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_core.v:17]
+	Parameter TBITS bound to: 64 - type: integer 
+	Parameter TBYTE bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'yolo_core' (1#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_core.v:17]
+INFO: [Synth 8-6157] synthesizing module 'INPUT_STREAM_if' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:13]
+	Parameter TBITS bound to: 64 - type: integer 
+	Parameter TBYTE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'INPUT_STREAM_reg_slice' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:187]
+	Parameter N bound to: 74 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'INPUT_STREAM_reg_slice' (2#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:187]
+INFO: [Synth 8-6157] synthesizing module 'INPUT_STREAM_fifo' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:110]
+	Parameter DATA_BITS bound to: 74 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'INPUT_STREAM_fifo' (3#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'INPUT_STREAM_if' (4#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:13]
+INFO: [Synth 8-6157] synthesizing module 'OUTPUT_STREAM_if' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:13]
+	Parameter TBITS bound to: 64 - type: integer 
+	Parameter TBYTE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OUTPUT_STREAM_reg_slice' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:186]
+	Parameter N bound to: 74 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'OUTPUT_STREAM_reg_slice' (5#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:186]
+INFO: [Synth 8-6157] synthesizing module 'OUTPUT_STREAM_fifo' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:111]
+	Parameter DATA_BITS bound to: 74 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'OUTPUT_STREAM_fifo' (6#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:111]
+INFO: [Synth 8-6155] done synthesizing module 'OUTPUT_STREAM_if' (7#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:13]
+INFO: [Synth 8-6157] synthesizing module 'yolo_rst_if' [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_rst_if.v:4]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'yolo_rst_if' (8#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_rst_if.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'yolo_top' (9#1) [E:/Proj_2019/NCHU/YoloTop_ref/rtl/yolo_top.v:11]
+WARNING: [Synth 8-3331] design yolo_core has unconnected port rst
+WARNING: [Synth 8-3331] design yolo_core has unconnected port clk
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 613.828 ; gain = 223.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 636.582 ; gain = 246.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 636.582 ; gain = 246.258
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'INPUT_STREAM_reg_slice'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Proj_2019/NCHU/YoloTop_ref/rtl/INPUT_STREAM_if.v:161]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'OUTPUT_STREAM_reg_slice'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:162]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'INPUT_STREAM_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'OUTPUT_STREAM_reg_slice'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 647.414 ; gain = 257.090
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               74 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     74 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 20    
+	   3 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module INPUT_STREAM_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               74 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module INPUT_STREAM_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module OUTPUT_STREAM_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               74 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module OUTPUT_STREAM_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2520 (col length:168)
+BRAMs: 1824 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3936] Found unconnected internal register 'OUTPUT_STREAM_if_U/rs/data_p1_reg' and it is trimmed from '74' to '73' bits. [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'OUTPUT_STREAM_if_U/rs/data_p2_reg' and it is trimmed from '74' to '73' bits. [E:/Proj_2019/NCHU/YoloTop_ref/rtl/OUTPUT_STREAM_if.v:240]
+WARNING: [Synth 8-3331] design yolo_top has unconnected port aclk
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name               | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | gen_sr[15].mem_reg[15] | 74     | 74         | 74     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | gen_sr[15].mem_reg[15] | 74     | 74         | 74     | 0       | 0      | 0      | 0      | 
++------------+------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |LUT1   |     3|
+|3     |LUT2   |     4|
+|4     |LUT4   |   162|
+|5     |LUT5   |    12|
+|6     |LUT6   |     2|
+|7     |SRL16E |   146|
+|8     |FDCE   |     2|
+|9     |FDPE   |    10|
+|10    |FDRE   |   300|
+|11    |FDSE   |     2|
+|12    |IBUF   |    78|
+|13    |OBUF   |    75|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------+------------------------+------+
+|      |Instance             |Module                  |Cells |
++------+---------------------+------------------------+------+
+|1     |top                  |                        |   798|
+|2     |  INPUT_STREAM_if_U  |INPUT_STREAM_if         |   322|
+|3     |    isif_fifo        |INPUT_STREAM_fifo       |    90|
+|4     |    rs               |INPUT_STREAM_reg_slice  |   232|
+|5     |  OUTPUT_STREAM_if_U |OUTPUT_STREAM_if        |   321|
+|6     |    osif_fifo        |OUTPUT_STREAM_fifo      |    90|
+|7     |    rs               |OUTPUT_STREAM_reg_slice |   231|
++------+---------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1494.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 80 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 78 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1494.164 ; gain = 1103.840
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1494.164 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/Proj_2019/NCHU/YoloTop_ref/project_1/project_1.runs/synth_1/yolo_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file yolo_top_utilization_synth.rpt -pb yolo_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 22 10:49:07 2019...

@@ -1,0 +1,2 @@
+將 xliffs_v4_1 資料夾丟入 SDK lib資料夾內
+路徑: C:\Xilinx\SDK\2018.2\data\embeddedsw\lib\sw_services
